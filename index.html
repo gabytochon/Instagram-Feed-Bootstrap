@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/fc7c2cb4f8.js" crossorigin="anonymous"></script>
+
+    <title>Instagram Feed</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="height: 50px;">
+            <div class="container">
+                <div class="d-flex justify-content-start">
+                    <i class="fa-brands fa-instagram me-1 fs-5"></i>
+                    <div class="text-secondary fw-bold">Instagram</div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-success h-50 mt-1 fs-7 py-1" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Create a new post
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Create a new post</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Caption:</p>
+                                    <textarea class="form-control" id="formControlTextarea1" rows="2" placeholder="Add the caption of your post here"></textarea>
+                                    <button type="button" class="btn btn-light"><i class="fa-solid fa-camera"></i></button>
+                                    <button type="button" class="btn btn-light"><i class="fa-solid fa-location-dot"></i></button>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-success">Publish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown" style="list-style: none;">
+                            <a class="nav-link dropdown-toggle mt-1" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear fs-5"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-start" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Favorites</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Log Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+        <ul class="nav nav-pills mb-3 d-flex justify-content-center mt-5 pt-2" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i
+                        class="fa-solid fa-table-cells"></i></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i
+                        class="fa-solid fa-square"></i></button>
+            </li>
+
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                <div class="galeria">
+                    <div class="d-flex flex-row bd-highlight">
+                        <div class="col-4">
+                            <img src="https://uploads.vibra.co/1/2021/01/pasta-carbonara-receta.jpg"
+                                class="img-fluid img-thumbnail" alt="pasta-carbonara">
+                        </div>
+                        <div class="col-4"><img
+                                src="https://www.recetasparavivirmejor.com/wp-content/uploads/2021/04/recetasparavivirmejor_brownie_de_oreo_dulces_2021-3-1140x570.jpg"
+                                class="img-fluid img-thumbnail" alt="brownie-de-oreo">
+                        </div>
+                        <div class="col-4"><img
+                                src="https://www.deliciosi.com/images/2100/2100/pescado-empanizado.jpg"
+                                class="img-fluid img-thumbnail" alt="pescado-empanizado">
+                        </div>
+
+                    </div>
+                    <div class="d-flex flex-row bd-highlight">
+                        <div class="col-4">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/fb/cd/b7/jardin-central-del-museo.jpg?w=2000&h=-1&s=1"
+                                class="img-fluid img-thumbnail" alt="jardin-central-del-museo">
+                        </div>
+                        <div class="col-4"><img src="https://elsistema.org.ve/wp-content/uploads/2018/09/Sala-2-SB-CNASPM.jpg"
+                                class="img-fluid img-thumbnail" alt="Sala Simón Bolívar">
+                        </div>
+                        <div class="col-4"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Sabana_Grande_Caracas._Boulevard_of_Sabana_Grande%2C_Union_Street._La_Previsora_Tower._Vicente_Quintero_Photographer._11.jpg/2560px-Sabana_Grande_Caracas._Boulevard_of_Sabana_Grande%2C_Union_Street._La_Previsora_Tower._Vicente_Quintero_Photographer._11.jpg"
+                                class="img-fluid img-thumbnail" alt="Parque_Los_Caobos">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row bd-highlight">
+                        <div class="col-4">
+                            <img src="https://elucabista.com/wp-content/uploads/2020/11/ucab.jpg"
+                                class="img-fluid img-thumbnail" alt="Jardin de la UCAB">
+                        </div>
+                        <div class="col-4"><img
+                                src="https://www.madrid-traveller.com/wp-content/uploads/2020/03/plaza-de-cibeles.jpg"
+                                class="img-fluid img-thumbnail" alt="plaza-de-cibeles">
+                        </div>
+                        <div class="col-4"><img
+                                src="http://laguiadeparis.com/wp-content/uploads/2018/11/museo-louvre-paris.jpg"
+                                class="img-fluid img-thumbnail" alt="museo-louvre-paris">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="vertical">
+                    <div class="row justify-content-center">
+                        <div class="col-5 bg-light mt-4">
+                            <div class="row">
+                                <div class="col-6 p-2 fw-bold">Pasta carbonara</div>
+                                <div class="col-6 text-end p-2 text-black-50">2/4</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-0"><img
+                                        src="https://uploads.vibra.co/1/2021/01/pasta-carbonara-receta.jpg"
+                                        class="img-fluid" alt="pasta-carbonara">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-2">
+                                    <p class="mb-1 fw-bold">622 Likes</p>
+                                    <p class="text-justify mb-1">La pasta carbonara es una receta deliciosa, que no tiene complicaciones para preparar. 
+                                        Su mezcla de cremosidad y suave sabor hace que sea una de las salsas preferidas. #CocinaItaliana #PastaCarbonara</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1 p-2 text-center text-black-50"><i class="fa-regular fa-heart "></i>
+                                </div>
+                                <div class="col-10 p-2"><input type="text" placeholder="Comment..."
+                                        class="border-0 w-100">
+                                </div>
+                                <div class="col-1 p-2 text-center text-black-50"><i
+                                        class="fa-solid fa-ellipsis-vertical"></i></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-5 bg-light mt-5">
+                            <div class="row">
+                                <div class="col-6 p-2 fw-bold">Brownie de Oreo</div>
+                                <div class="col-6 text-end p-2 text-black-50">1/3</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-0"><img
+                                        src="https://www.recetasparavivirmejor.com/wp-content/uploads/2021/04/recetasparavivirmejor_brownie_de_oreo_dulces_2021-3-1140x570.jpg"
+                                        class="img-fluid" alt="brownie-de-oreo">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-2">
+                                    <p class="mb-1 fw-bold">788 Likes</p>
+                                    <p class="text-justify mb-1">¿Se acerca un cumpleaños? No cabe duda que un brownie de Oreo es el presente más acertado, sobre todo si ama las galletas de chocolate. No obstante, también puedes hornear este riquísimo dulce un día cualquiera entre semana o para darle la bienvenida a tus seres queridos. #BrownieDeOreo #recetas #postresdeliciosos</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1 p-2 text-center text-black-50"><i class="fa-regular fa-heart "></i>
+                                </div>
+                                <div class="col-10 p-2"><input type="text" placeholder="Comment..."
+                                        class="border-0 w-100">
+                                </div>
+                                <div class="col-1 p-2 text-center text-black-50"><i
+                                        class="fa-solid fa-ellipsis-vertical"></i></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-5 bg-light mt-5">
+                            <div class="row">
+                                <div class="col-6 p-2 fw-bold">Pescado empanizado</div>
+                                <div class="col-6 text-end p-2 text-black-50">1/4</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-0"><img
+                                        src="https://www.deliciosi.com/images/2100/2100/pescado-empanizado.jpg"
+                                        class="img-fluid" alt="pescado-empanizado">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-2">
+                                    <p class="mb-1 fw-bold">741 Likes</p>
+                                    <p class="text-justify mb-1">Si hay una receta sencilla de preparar es el pescado empanizado. No tiene ningún tipo de dificultad y además, es una receta perfecta para cuando no tenemos tiempo de estar en la cocina. #Recetasfaciles #PescadoEmpanizado</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1 p-2 text-center text-black-50"><i class="fa-regular fa-heart "></i>
+                                </div>
+                                <div class="col-10 p-2"><input type="text" placeholder="Comment..."
+                                        class="border-0 w-100">
+                                </div>
+                                <div class="col-1 p-2 text-center text-black-50"><i
+                                        class="fa-solid fa-ellipsis-vertical"></i></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-5 bg-light mt-5">
+                            <div class="row">
+                                <div class="col-6 p-2 fw-bold">Museo de Bellas Artes - Caracas</div>
+                                <div class="col-6 text-end p-2 text-black-50">1/6</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-0"><img
+                                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/fb/cd/b7/jardin-central-del-museo.jpg?w=2000&h=-1&s=1"
+                                        class="img-fluid" alt="jardin-central-del-museo">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-2">
+                                    <p class="mb-1 fw-bold">812 Likes</p>
+                                    <p class="text-justify mb-1">Buen lugar para visitar un fin de semana. 
+                                        Si desea reencontrarse con las opciones de visita en Caracas, el Museo de Bellas Artes es una excelente opción. #MuseoDeBellasArtes #Caracas</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1 p-2 text-center text-black-50"><i class="fa-regular fa-heart "></i>
+                                </div>
+                                <div class="col-10 p-2"><input type="text" placeholder="Comment..."
+                                        class="border-0 w-100">
+                                </div>
+                                <div class="col-1 p-2 text-center text-black-50"><i
+                                        class="fa-solid fa-ellipsis-vertical"></i></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-5 bg-light mt-5">
+                            <div class="row">
+                                <div class="col-6 p-2 fw-bold">Sala Simón Bolívar - Caracas</div>
+                                <div class="col-6 text-end p-2 text-black-50">2/6</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-0"><img
+                                        src="https://elsistema.org.ve/wp-content/uploads/2018/09/Sala-2-SB-CNASPM.jpg"
+                                        class="img-fluid" alt="Sala Simón Bolívar">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-2">
+                                    <p class="mb-1 fw-bold">423 Likes</p>
+                                    <p class="text-justify mb-1">La sala tiene una capacidad de ochocientas ochenta y ocho butacas, revestidas cada una con un diseño cinético del artista plástico venezolano Carlos Cruz-Diez y dispuestas en 24 zonas de distribución espacial. También, cuenta con un órgano tubular donado por la Fundación Empresas Polar, con una extensión de 11 metros de alto por 13 de largo, construido especialmente para El Sistema por la compañía alemana Orgelbau Klais. #SalaSimonBolivar</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1 p-2 text-center text-black-50"><i class="fa-regular fa-heart "></i>
+                                </div>
+                                <div class="col-10 p-2"><input type="text" placeholder="Comment..."
+                                        class="border-0 w-100">
+                                </div>
+                                <div class="col-1 p-2 text-center text-black-50"><i
+                                        class="fa-solid fa-ellipsis-vertical"></i></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-5 bg-light mt-5">
+                            <div class="row">
+                                <div class="col-6 p-2 fw-bold">Parque Los Caobos - Caracas</div>
+                                <div class="col-6 text-end p-2 text-black-50">2/7</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-0"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Sabana_Grande_Caracas._Boulevard_of_Sabana_Grande%2C_Union_Street._La_Previsora_Tower._Vicente_Quintero_Photographer._11.jpg/2560px-Sabana_Grande_Caracas._Boulevard_of_Sabana_Grande%2C_Union_Street._La_Previsora_Tower._Vicente_Quintero_Photographer._11.jpg"
+                                        class="img-fluid" alt="Parque_Los_Caobos">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-2">
+                                    <p class="mb-1 fw-bold">1.478 Likes</p>
+                                    <p class="text-justify mb-1">El Parque Los Caobos es uno de los parques más antiguos de Caracas, Venezuela. Está ubicado cerca de los Museos de Bellas Artes, de Ciencias de Caracas, la Galería Nacional, la Universidad Nacional Experimental de las Artes (antes Ateneo de Caracas), del Teatro Teresa Carreño y del Boulevard Amador Bendayan.
+                                        Una de las obras más resaltantes del parque es la Fuente Monumental Venezuela obra del arquitecto catalán Ernesto Maragall (1903 Barcelona, España- 1991 Caracas). La fuente está constituida por varia figuras humanas que representan las distintas regiones del país. Cabe destacar que esta fuente originalmente estaba ubicada en la Plaza Venezuela hasta los años 60 cuando se decidió modernizarla.
+                                     #LugaresBonitosEnCaracas #ParqueLosCaobos </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1 p-2 text-center text-black-50"><i class="fa-regular fa-heart "></i>
+                                </div>
+                                <div class="col-10 p-2"><input type="text" placeholder="Comment..."
+                                        class="border-0 w-100">
+                                </div>
+                                <div class="col-1 p-2 text-center text-black-50"><i
+                                        class="fa-solid fa-ellipsis-vertical"></i></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-5 bg-light mt-5">
+                            <div class="row">
+                                <div class="col-6 p-2 fw-bold">La UCAB</div>
+                                <div class="col-6 text-end p-2 text-black-50">2/10</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-0"><img
+                                        src="https://elucabista.com/wp-content/uploads/2020/11/ucab.jpg"
+                                        class="img-fluid" alt="Jardin de la UCAB">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-2">
+                                    <p class="mb-1 fw-bold">741 Likes</p>
+                                    <p class="text-justify mb-1">Andrés Bello Catholic University also known in Spanish as Universidad Católica Andrés Bello is a private university in Venezuela. One of the largest universities in Venezuela, UCAB has campuses in several cities, such as Caracas, Los Teques, Guayana, and Coro. #LaUCAB</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1 p-2 text-center text-black-50"><i class="fa-regular fa-heart "></i>
+                                </div>
+                                <div class="col-10 p-2"><input type="text" placeholder="Comment..."
+                                        class="border-0 w-100">
+                                </div>
+                                <div class="col-1 p-2 text-center text-black-50"><i
+                                        class="fa-solid fa-ellipsis-vertical"></i></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-5 bg-light mt-5">
+                            <div class="row">
+                                <div class="col-6 p-2 fw-bold">Plaza de Cibeles</div>
+                                <div class="col-6 text-end p-2 text-black-50">2/4</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-0"><img
+                                        src="https://www.madrid-traveller.com/wp-content/uploads/2020/03/plaza-de-cibeles.jpg"
+                                        class="img-fluid" alt="plaza-de-cibeles">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-2">
+                                    <p class="mb-1 fw-bold">746 Likes</p>
+                                    <p class="text-justify mb-1">Plaza de Cibeles, or Cibeles Square, is a famous square and a landmark in the heart of Madrid. A Neoclassical fountain and statues and sculptures made of marble have been placed in the center of the square and, together with the Palacio de Cibeles, have become an important symbol of the city. #PlazaDeCibeles </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1 p-2 text-center text-black-50"><i class="fa-regular fa-heart "></i>
+                                </div>
+                                <div class="col-10 p-2"><input type="text" placeholder="Comment..."
+                                        class="border-0 w-100">
+                                </div>
+                                <div class="col-1 p-2 text-center text-black-50"><i
+                                        class="fa-solid fa-ellipsis-vertical"></i></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-5 bg-light mt-5">
+                            <div class="row">
+                                <div class="col-6 p-2 fw-bold">Museo louvre - Paris</div>
+                                <div class="col-6 text-end p-2 text-black-50">2/14</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-0"><img
+                                        src="http://laguiadeparis.com/wp-content/uploads/2018/11/museo-louvre-paris.jpg"
+                                        class="img-fluid" alt="museo-louvre-paris">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 p-2">
+                                    <p class="mb-1 fw-bold">1.784 Likes</p>
+                                    <p class="text-justify mb-1">Museo de Louvre, ubicado en el Palacio del Louvre, en París, es uno de los museos que destaca por su amplia cantidad de colecciones y de piezas importantes del arte a lo largo de los siglos.
+                                        Es el museo más importante de Francia y uno de los más visitados del mundo. Actualmente recibe más de ocho millones de visitantes cada año. #Top5Museos #YaQuieroVolver! #Museolouvre </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1 p-2 text-center text-black-50"><i class="fa-regular fa-heart "></i>
+                                </div>
+                                <div class="col-10 p-2"><input type="text" placeholder="Comment..."
+                                        class="border-0 w-100">
+                                </div>
+                                <div class="col-1 p-2 text-center text-black-50"><i
+                                        class="fa-solid fa-ellipsis-vertical"></i></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
